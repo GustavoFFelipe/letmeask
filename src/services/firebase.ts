@@ -1,15 +1,16 @@
 import firebase from 'firebase/compat/app'; // foi feita uma alteração do original por causa da versao anterior do JS SDK.
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import 'firebase/compat/database';// foi preciso importar compat/database para ser aceito o env.local
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD-0pjINXNq22vUXRzvFTG6ZSRpORLBEZE",
-    authDomain: "letmeask-1c837.firebaseapp.com",
-    databaseURL: "https://letmeask-1c837-default-rtdb.firebaseio.com",
-    projectId: "letmeask-1c837",
-    storageBucket: "letmeask-1c837.appspot.com",
-    messagingSenderId: "106365310691",
-    appId: "1:106365310691:web:e49bcc0f595f9c024b17d6"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 firebase.initializeApp(firebaseConfig);
