@@ -1,0 +1,31 @@
+.button {
+    height: 5rem;
+    border-radius: .8rem;
+    background-color: #835AFD;
+    border: 0;
+    padding: 0 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: filter 0.2s;
+    img{
+        margin-right: .8rem;
+    }
+
+    &:not(:disabled):hover { // recebe hover apenas se o botão não estiver em disable
+        filter: brightness(.9);
+    }
+    &:disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+}

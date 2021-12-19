@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+// firebase services
 import 'firebase/database';
 import './services/firebase';
+
+//css
+import './styles/global.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
